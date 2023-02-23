@@ -43,6 +43,11 @@ onMounted(() => {
         <div class="flex justify-items-center">
           <NuxtLink to="/learn" class="hover:font-bold pb-2"> Learn </NuxtLink>
         </div>
+        <div class="flex justify-items-center">
+          <NuxtLink to="/products" class="hover:font-bold pb-2">
+            Products
+          </NuxtLink>
+        </div>
 
         <div class="flex items-center">
           <NuxtLink to="/contact" class="hover:font-bold pb-2">
