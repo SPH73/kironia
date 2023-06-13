@@ -108,8 +108,8 @@ onMounted(() => {
                    Herb Directory
                   </NuxtLink>
               </li>
-              <li v-for="herb in herbsList" :key="herb" class="flex justify-items-center">
-                <NuxtLink to="/guide-to-herbs/:herb" class="hover:font-bold pb-2 text-left"
+              <li v-for="herb in herbsList" :key="herb.id" class="flex justify-items-center">
+                <NuxtLink :to="`/guide-to-herbs/${herb.commonName}`" class="hover:font-bold pb-2 text-left"
                   aria-label="Navigate to the holiday activity camps page">
                  {{herb.herbId}} ({{herb.commonName}})
                 </NuxtLink>
