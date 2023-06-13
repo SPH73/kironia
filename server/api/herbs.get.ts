@@ -8,7 +8,7 @@ export default defineEventHandler(async () => {
   const table = base("herbs");
 
   const records = await table.select(
-    {sort: [{field: "commonName", direction: "asc"}]}
+   { filterByFormula: "NOT({display} = 'false')", view: "Grid view", sort: [{field: "commonName", direction: "asc"}] }
   ).firstPage();
   if (!records) {
     throw Error("Unable to fetch herb info");
