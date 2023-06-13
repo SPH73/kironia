@@ -5,11 +5,13 @@ export default defineEventHandler(async () => {
   const { atBaseId } = useRuntimeConfig().public;
   const base = new Airtable({ apiKey: atApiKey }).base(atBaseId);
 
-  const table = base("seedRange");
+  const table = base("herbs");
 
-  const records = await table.select().firstPage();
+  const records = await table.select(
+    {sort: [{field: "commonName", direction: "asc"}]}
+  ).firstPage();
   if (!records) {
-    throw Error("Unable to fetch seed info");
+    throw Error("Unable to fetch herb info");
   }
   // console.log('airtable seeds', records)
 
