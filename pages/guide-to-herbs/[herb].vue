@@ -43,10 +43,9 @@ const herb = computed(() => {
 <template>
   <div class="max-w-6xl">
     <div class="container mt-4">
-    <h1 class="text-3xl">Herb Name</h1>
-    <p class="pb-4">Herb details for {{ $route.params.herb }}</p>
-    <pre class="p-4">Selected Herb: {{ herb }}</pre>
-
+    <h1 class="text-3xl">{{herb.commonName}}</h1>
+    <!-- <p class="pb-4">Herb details for {{ $route.params.herb }}</p> -->
+    <pre class="p-4">Selected Herb raw data: {{ herb }}</pre>
     </div>
    
   </div>
