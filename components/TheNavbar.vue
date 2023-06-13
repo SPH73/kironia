@@ -330,7 +330,7 @@ onMounted(() => {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  max-width: 9rem;
+  max-width: 8.3rem;
 }
 
 .dropdown-content {
